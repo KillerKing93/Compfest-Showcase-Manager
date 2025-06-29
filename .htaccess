@@ -4,7 +4,10 @@ Options -Indexes
 # Enable rewrite engine
 RewriteEngine On
 
-# Redirect all requests to public folder
+# Allow direct access to fix_database.php
+RewriteRule ^fix_database\.php$ - [L]
+
+# Redirect all requests to public folder, except if already in /public
 RewriteCond %{REQUEST_URI} !^/public/
 RewriteRule ^(.*)$ public/$1 [L]
 
