@@ -5,7 +5,6 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
 $routes->get('/', 'Projects::index');
 $routes->get('projects', 'Projects::index');
 $routes->get('projects/create', 'Projects::create');
